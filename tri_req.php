@@ -2,24 +2,7 @@
 
 class tri{
   
-  function curls($host,$header,$body,$method)
-  	{
-  		$ch = curl_init();
-  		curl_setopt($ch, CURLOPT_URL, $host);
-  		curl_setopt($ch, CURLOPT_HTTPHEADER, $header);	
-  		curl_setopt($ch, CURLOPT_HEADER, true);
-  		curl_setopt($ch, CURLOPT_CUSTOMREQUEST, $method);
-  		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-  		curl_setopt($ch, CURLOPT_ENCODING, 'gzip');
-  		curl_setopt($ch, CURLOPT_POSTFIELDS, $body);
-  		curl_setopt($ch, CURLOPT_COOKIEJAR, 'cookie.txt');
-  		curl_setopt($ch, CURLOPT_COOKIEFILE, 'cookie.txt');
-  		curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
-curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
-  		$req = curl_exec($ch);
-  		$req = explode("\r\n\r\n", $req);
-  		return $req;
-  	}
+
 
 
 
